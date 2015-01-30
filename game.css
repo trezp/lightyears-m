@@ -1,0 +1,69 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Strait', sans-serif;
+}
+
+.main {
+	font-family: 'Syncopate', sans-serif;
+	font-size: 50px;
+	letter-spacing: 20px;
+	margin-left: 40px;
+	text-align: center;
+}
+
+p {
+	font-size: 20px;
+	text-align: center;
+}
+
+.card {
+	height: 225px;
+	width: 175px;
+	border: solid black 2px;
+	display: inline-block;
+	margin: 0px 5px 0px 5px;
+}
+
+.hand li {
+	font-size: 20px;
+	list-style: none;
+	padding: 5px;
+	margin-top: 25px;
+	margin-left: 25px;
+}
+
+.fa-rocket {
+	margin-top: 10px;
+	font-size: 100px;
+	color: blue;
+}
+
+.fa-user {
+	margin-left: 150px;
+	color: green;
+}
+
+
+.avatar {
+	margin-left: 45px;
+	margin-bottom: 25px;
+	display: inline-block;
+	height: 200px;
+	width: 400px;
+	border: solid 2px black;
+	position: relative;
+}
+
+.stack {
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	border: solid 3px green;
+	position: relative;
+
+}
+
+

@@ -1,0 +1,25 @@
+<template name='home'>
+	<h1 class="main"> Light Years</h1>
+	<div class="avatarandstack">
+		{{> avatar}}
+		<!-- {{> stack}} -->
+	</div>
+	
+	{{> gameTable}}
+</template>
+
+
+
+
+<template name="avatar">
+	<div class="avatar">
+		<p>Bob, it's your turn!</p>
+		<i class="fa fa-user fa-5x"></i>
+		</div>
+</template>
+
+<template name="stack">
+	<div class="stack">
+		<p>Bob is stalled.</p>
+	</div>
+</template>
