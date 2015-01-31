@@ -1,25 +1,46 @@
 <template name='home'>
+	<div id="wrapper">
 	<h1 class="main"> Light Years</h1>
 	<div class="avatarandstack">
 		{{> avatar}}
-		<!-- {{> stack}} -->
+		{{> messageBox}}
+		{{> deck}}
+		{{> stack}}
 	</div>
 	
 	{{> gameTable}}
+	</div>
 </template>
 
 
 
 
 <template name="avatar">
-	<div class="avatar">
-		<p>Bob, it's your turn!</p>
+	<div class="avatarbox">
 		<i class="fa fa-user fa-5x"></i>
-		</div>
+		<p>Bob, it's your turn!</p>
+	</div>
+</template>
+
+<template name="messageBox">
+
+	<div class="messageBox">
+		<p class="status">Status:</p>
+		<h1>Out of Fuel!</h1>
+		<p>Treasure siphoned off your fuel. You can't move until you play a Plutonium card.</p>
+	</div>
+</template>
+
+<template name="deck">
+	<div class="deck">
+		<p>DRAW A CARD</p>
+	</div>
 </template>
 
 <template name="stack">
 	<div class="stack">
-		<p>Bob is stalled.</p>
+		<i class="fa fa-map-marker fa-5x"></i>
+		<p>Map of the Universe</p>
 	</div>
 </template>
+

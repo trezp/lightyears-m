@@ -4,14 +4,23 @@
 
 body {
 	font-family: 'Strait', sans-serif;
+	background-image: url("/img/galaxybluegreen.jpg");
+	/*background-image: url("/img/outerspaceXL.jpg");*/
+	/*background-repeat: no-repeat;*/
+	border: 0;
+	margin: 0;
 }
+
 
 .main {
 	font-family: 'Syncopate', sans-serif;
-	font-size: 50px;
-	letter-spacing: 20px;
-	margin-left: 40px;
+	color: white;
+	font-size: 2rem;
+	letter-spacing: 1.6rem;
+	margin: 20px 0 20px 0;
 	text-align: center;
+	text-shadow: 4px 3px 3px rgba(75, 75, 75, 1);
+	font-weight: 700;
 }
 
 p {
@@ -19,13 +28,7 @@ p {
 	text-align: center;
 }
 
-.card {
-	height: 225px;
-	width: 175px;
-	border: solid black 2px;
-	display: inline-block;
-	margin: 0px 5px 0px 5px;
-}
+
 
 .hand li {
 	font-size: 20px;
@@ -35,35 +38,112 @@ p {
 	margin-left: 25px;
 }
 
+.avatarandstack {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	background-color: black;
+	width: 100%;
+	padding: 40px;
+	
+}
+
 .fa-rocket {
-	margin-top: 10px;
-	font-size: 100px;
+	margin-top: .525rem;
 	color: blue;
 }
 
+.avatarbox {
+	background: black;
+	width: 10rem;
+	height: 10rem;
+	margin: 40px;
+	text-align: center;
+	
+}
+
+.avatarbox p {
+	padding: 0px 5px 0px 5px;
+	color: white;
+
+}
+
 .fa-user {
-	margin-left: 150px;
 	color: green;
+	margin-top: 5px;
+}
+
+.card {
+	height: 14.06rem;
+	width: 10rem;
+	display: inline-flex;
+	margin: .3125rem;
+	margin-top: 20px;
+	background-color: white;
+	border-radius: 5px;
 }
 
 
-.avatar {
-	margin-left: 45px;
-	margin-bottom: 25px;
-	display: inline-block;
-	height: 200px;
-	width: 400px;
-	border: solid 2px black;
-	position: relative;
+
+.messageBox {
+	margin: 1rem;
+	margin-left: 0px;
+	height: 175px;
+	width: 300px;
+	background-color: black;
+	border-radius: 5px;
+	
+	
+}
+
+.messageBox p {
+	margin-top: 10px;
+	padding: 0px 5px 0px 5px;
+	color: white;
+}
+
+.status {
+	margin-bottom: 5px;
+}
+
+.messageBox h1 {
+	font-size: 3em;
+	margin: 0px;
+	color: #fb2e01;
+	text-align: center;
 }
 
 .stack {
-	display: inline-block;
-	height: 200px;
-	width: 200px;
-	border: solid 3px green;
-	position: relative;
-
+	height: 14.06rem;
+	width: 10rem;
+	background-color: white;
+	border-radius: 5px;
+	margin: 1rem;
+	margin-right: 40px;
+	
+	
 }
 
+.fa-map-marker {
+	color: #fb2e01;
+	margin-left: 55px;
+	margin-top: 20px;
+}
+
+.deck {
+	
+	color: white;
+	height: 14.06rem;
+	width: 10rem;
+	background-color: white;
+	border-radius: 5px;
+	margin: 1rem;
+	
+}
+
+.deck p {
+	margin-top: 100px;
+	font-size: 1.5em;
+	color: black;
+}
 
