@@ -2,10 +2,15 @@
 	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Syncopate|Strait' rel='stylesheet' type='text/css'>
+	
+
 </head>
 
 <template name="layout">
-	<div class="main">
-		{{> yield}}
+	<div class="main-layout">
+		{{> login}}
+		{{#if currentUser}}
+			{{> home}}
+		{{/if}}
 	</div>
 </template>

@@ -1,14 +1,16 @@
+
+
+
 <template name='home'>
 	<div id="wrapper">
-	<h1 class="main"> Light Years</h1>
+	<div class="main"><p>Light Years Traveled: 525</p></div>
 	<div class="avatarandstack">
 		{{> avatar}}
 		{{> messageBox}}
 		{{> deck}}
 		{{> stack}}
 	</div>
-	
-	{{> gameTable}}
+		{{> gameTable}}
 	</div>
 </template>
 
@@ -18,7 +20,8 @@
 <template name="avatar">
 	<div class="avatarbox">
 		<i class="fa fa-user fa-5x"></i>
-		<p>Bob, it's your turn!</p>
+		<p>Player: Bob</p>
+		
 	</div>
 </template>
 
@@ -43,4 +46,11 @@
 		<p>Map of the Universe</p>
 	</div>
 </template>
+
+<!-- <template name="score">
+	<div class="score">
+		<p>Score:</p>
+		<p>You've traveled 500 light years. 500 more to go!</p>
+	</div>
+</template> -->
 
