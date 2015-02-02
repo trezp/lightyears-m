@@ -8,9 +8,10 @@
 
 <template name="layout">
 	<div class="main-layout">
-		{{> login}}
+		{{> loginButtons}}
+		.<h1 class="homescreen welcome">Light Years </h1>
 		{{#if currentUser}}
-			{{> home}}
+		{{> userList}}
 		{{/if}}
 	</div>
 </template>

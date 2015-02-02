@@ -1,56 +1,19 @@
-
-
-
-<template name='home'>
-	<div id="wrapper">
-	<div class="main"><p>Light Years Traveled: 525</p></div>
-	<div class="avatarandstack">
-		{{> avatar}}
-		{{> messageBox}}
-		{{> deck}}
-		{{> stack}}
+<template name="userList">
+	<div class="column">
+		<p class="homescreen">Choose an opponent, {{currentUser}}:</p>
+		<ul class="oppenentList">
+			{{#each users}}
+				{{> userItem}}
+			{{/each}}
+		</ul>
 	</div>
-		{{> gameTable}}
-	</div>
+</template>
+
+<template name="userItem">
+	<li><button>{{username}}</button></li>
 </template>
 
 
 
 
-<template name="avatar">
-	<div class="avatarbox">
-		<i class="fa fa-user fa-5x"></i>
-		<p>Player: Bob</p>
-		
-	</div>
-</template>
-
-<template name="messageBox">
-
-	<div class="messageBox">
-		<p class="status">Status:</p>
-		<h1>Out of Fuel!</h1>
-		<p>Treasure siphoned off your fuel. You can't move until you play a Plutonium card.</p>
-	</div>
-</template>
-
-<template name="deck">
-	<div class="deck">
-		<p>DRAW A CARD</p>
-	</div>
-</template>
-
-<template name="stack">
-	<div class="stack">
-		<i class="fa fa-map-marker fa-5x"></i>
-		<p>Map of the Universe</p>
-	</div>
-</template>
-
-<!-- <template name="score">
-	<div class="score">
-		<p>Score:</p>
-		<p>You've traveled 500 light years. 500 more to go!</p>
-	</div>
-</template> -->
 

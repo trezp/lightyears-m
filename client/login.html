@@ -1,12 +1,6 @@
-<template name='login'>
-	{{#if loggingIn}}
-		Preparing your spaceship... 
-	{{else}}
-		{{> loginButtons}}
-	{{/if}}
-</template>
 
-<template name="signup">
+
+<!-- <template name="signup">
 	<div class="signup">
 		<form class="accounts">
 			<h1>Sign Up</h1>
@@ -35,18 +29,8 @@
 		({{ currentUser.username }})
 		<button>Log Out</button>
 	</form>
-</template>
+</template> -->
 
-<template name="playerList">
-	<div class="column">
-		<h1>Players</h1>
-		<p>Choose an opponent:</p>
-		<ul>
-			{{#each users}}
-				{{> playerItem}}
-			{{/each}}
-		</ul>
-	</div>
-</template>
+
 
 

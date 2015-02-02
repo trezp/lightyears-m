@@ -1,7 +1,54 @@
-<template name="gameTable">
 
-	<!-- {{> stack}}
- -->	<div class="handbox">
+<!-- GAME SCREEN -->
+<template name='game'>
+	<div id="wrapper">
+	<div class="main"><p>Light Years Traveled: 525</p></div>
+	<div class="avatarandstack">
+		{{> avatar}}
+		{{> messageBox}}
+		{{> deck}}
+		{{> stack}}
+	</div>
+		{{> playerHand}}
+	</div>
+</template>
+
+<!-- AVATAR  -->
+<template name="avatar">
+	<div class="avatarbox">
+		<i class="fa fa-user fa-5x"></i>
+		<p>Player: Bob</p>
+		
+	</div>
+</template>
+
+<!-- MESSAGE/STATUS BOX -->
+<template name="messageBox">
+	<div class="messageBox">
+		<p class="status">Status:</p>
+		<h1>Out of Fuel!</h1>
+		<p>Treasure siphoned off your fuel. You can't move until you play a Plutonium card.</p>
+	</div>
+</template>
+
+<!-- DECK -->
+<template name="deck">
+	<div class="deck">
+		<p>DRAW A CARD</p>
+	</div>
+</template>
+
+<!-- STACK -->
+<template name="stack">
+	<div class="stack">
+		<i class="fa fa-map-marker fa-5x"></i>
+		<p>Map of the Universe</p>
+	</div>
+</template>
+
+<!-- PLAYER'S HAND -->
+<template name="playerHand">
+	<div class="handbox">
 		<ul class="hand">
 			<div class="card">
 				<li>Engine Failure<br><i class="fa fa-rocket fa-5x"></i></li>
@@ -23,5 +70,4 @@
 			</div>	
 		</ul>
 	</div>
-	<!-- {{> discard}} -->
 </template>
