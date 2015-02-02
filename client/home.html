@@ -1,19 +1,41 @@
 <template name="userList">
 	<div class="column">
-		<p class="homescreen">Choose an opponent, {{currentUser}}:</p>
+		<div class="homescreen">Choose an opponent, {{currentUser}}:
 		<ul class="oppenentList">
 			{{#each users}}
 				{{> userItem}}
 			{{/each}}
+
 		</ul>
+		</div>
 	</div>
 </template>
 
 <template name="userItem">
-	<li><button>{{username}}</button></li>
+	<li>
+		<button>{{username}}</button>
+
+	</li>
 </template>
 
+<template name="gameList">
+	<h1 class="homescreen">Current Games</h1>
+	<ul class="oppenentList">
+		{{#each games}}
+			{{> gameItem}}
+		{{/each}}
+	</ul>
+</template>
 
+<template name="gameItem">
+	<li>
+		<a href="/game/{{_id}}">Race with {{opponent}}</a>
+		<span>{{#if inProgress}}
+					{{started}}
+			{{/if}}
+		</span>
+	</li>
+</template>
 
 
 
