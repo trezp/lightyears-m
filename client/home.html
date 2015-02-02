@@ -5,7 +5,6 @@
 			{{#each users}}
 				{{> userItem}}
 			{{/each}}
-
 		</ul>
 		</div>
 	</div>
@@ -28,7 +27,7 @@
 </template>
 
 <template name="gameItem">
-	<li>
+	<li class="gameItem">
 		<a href="/game/{{_id}}">Race with {{opponent}}</a>
 		<span>{{#if inProgress}}
 					{{started}}

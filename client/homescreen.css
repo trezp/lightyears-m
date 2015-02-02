@@ -17,11 +17,18 @@ a:hover {
 .welcome {
   font-family: 'Syncopate', sans-serif;
   color: white;
-  font-size: 2rem;
-  letter-spacing: 1.5rem;
-  background-color: black;
+  font-size: 3rem;
+  letter-spacing: 2rem;
   margin: 40px;
   padding: 10px;
+}
+
+.lightyears {
+  background-color: black;
+  width: 100%;
+  padding: 20px;
+  margin: 50px 0 50px 0;
+  opacity: .7;
 }
 
 .oppenentList {
@@ -34,23 +41,22 @@ a:hover {
   font-size: 2em;
 }
 
+.gameItem {
+  color: blue;
+  font-size: 20px;
+  width: 30%;
+  margin: 5px;
+}
+
 button {
-  margin-top: 10px;
-  border: none;
-  background: #34d9cb;
-  background-image: -webkit-linear-gradient(top, #34d9cb, #2980b9);
-  background-image: -moz-linear-gradient(top, #34d9cb, #2980b9);
-  background-image: -ms-linear-gradient(top, #34d9cb, #2980b9);
-  background-image: -o-linear-gradient(top, #34d9cb, #2980b9);
-  background-image: linear-gradient(to bottom, #34d9cb, #2980b9);
-  -webkit-border-radius: 18;
-  -moz-border-radius: 18;
-  border-radius: 10px;
   color: #ffffff;
-  font-size: 16px;
-  padding: 5px 15px 5px 15px;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
   text-decoration: none;
-  letter-spacing: 1.5px;
+  margin: 5px;
+  background-color: black;
+  border-radius: 5px;
+  border: none;
 }
 
 button:hover {
