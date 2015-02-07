@@ -1,4 +1,11 @@
 <template name="play">
 	{{> loginButtons}}
-	{{> game}}
+	{{#if currentUser}}
+		{{> status}}
+		{{> game}}
+	{{/if}}
+</template>
+
+<template name="status">
+	<p><a href="/">Back to home screen</a></p>
 </template>
