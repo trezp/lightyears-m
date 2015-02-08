@@ -1,6 +1,6 @@
 //player actions 
-	//must draw a card 
-	//must discard or play a card 
+	//must draw a card every turn 
+	//must discard a card or play a card every turn 
 		//play a card on own stack 
 			//mileage card or immunity card 
 				//mileage card 
@@ -10,56 +10,74 @@
 		//play a card on opponent's stack 
 			//hazard card 
 				//if oppenent has immunity, cannot play card 
-
-//prompts 
-	//Draw a card 
+	//if no moves
+		//discard 
+function playerChoice(){
 	//Choose a card 
 		//You have chosen an immunity card. 
-			//playSelf()
-			//discard()
+			//Play
+				//playSelf()
+			//Discard 	
+				//discard()
 		//You have chosen an remedy card. 
-			//playSelf()
-			//discard()
+			//Play
+				//playSelf()
+			//Discard 	
+				//discard()
 		//You have chosen an hazard card. 
-			//playOpponent()
-			//discard()
-		//You have chosen a mileage card. 
-			//playSelf()
-			//discard()
+			//Play on Oppenent 
+				//playOpponent()
+			//Discard
+				//discard()
+		//You have chosen a mileage card.
+			//Travel {{numberOfMiles}} 
+				//playSelf()
+			//Discard
+				//discard()
 
-
-function playSelf(){	
-	if(mileageCard){
-		if (playerStalled){
+}
+	
+//examines the cardType and calls appropriate functions 
+function playSelf(){
+	//if the player is stalled, they can't play a mileage card
+	if(cardType === "mileageCard"){
+		if (player.stalled = true){
 			rejectPlay()
 		} else {
 			moveCardToPlayerStack()
 			updateScore() 
 		}
-	} else if(remedyCard) {
-		if (!playerStalled){
+	//the player can't play a remedy card unless they are stalled  
+	} else if(cardType === "remedy") {
+	//a remedy card can only remedy its matching hazard 
+	//This isn't going to work. Must figure out a way to match up the hazard and remedy cards 
+		if (card.title !== card.fixes) {
+			rejectPlay(); 
+		} else if (player.stalled = false;){
 			rejectPlay()
 		} else {
 			moveCardToPlayerStack()
 			updatePlayerStalled()
 		}
-	} else if (immunityCard) {
+	//if the cardType is immunity, updates immunity 
+	} else if (cardType === "immunityCard") {
 	   updateImmunity()
+	   extraTurn();
 	} else {
-		rejectPlay()
+		rejectPlay();
 	}
 	
 } 
 
 function playOpponent(){
-	if(immunityCard || remedyCard || mileageCard){
-		rejectPlay()
-	} else if (opponent stalled = true) {
-		rejectPlay()
-	} else {
-		moveCardToOpponentStack()
-		updatePlayerStalled() 
-	}
+	if(immunityCard || remedyCard || mileageCard || player.stalled = true){
+		rejectPlay();
+	} else if (player.immunity === card.title){
+		rejectPlay();  
+	} else if {
+		moveCardToOpponentStack();
+		updatePlayerStalled(); 
+	} 
 }
 
 function moveCardToPlayerStack(){
@@ -83,11 +101,23 @@ function updateScore(){
 }
 
 function updateImmunity(){
-	if(immunity = true){
-		immunity = false; 
-	} else if (immunity = false){
-		immunity = true; 
-	}
+	if(immunityCard.title = "Superstar Astronaut"){
+		player.immunity = "Superstar Astronaut"; 
+	} 
+
+	if(immunityCard.title = "Force Field"){
+		player.immunity = "Force Field"; 
+	} 
+
+	if(immunityCard.title = "Interstellar Diplomat"){
+		player.immunity = "Interstellar Diplomat"; 
+	} 
+
+	if(immunityCard.title = "Map of the Universe"){
+		player.immunity = "Map of the Universe"; 
+	} 
+
+
 }
 
 function discard(){
@@ -95,14 +125,19 @@ function discard(){
 }
 
 function rejectPlay(){
-	//tell player they're attempting an illegal move 
-	//if player stalled and trying to update mileage
-	//if trying to play remedy or immunity card on opponent 
-	//if trying to play unneeded remedy card 
-	//if trying to play hazard card on already stalled opponent 
+	//tell player they're attempting an illegal move:
+		//if player stalled and trying to update mileage
+		//if trying to play remedy or immunity card on opponent 
+		//if trying to play unneeded remedy card 
+		//if trying to play hazard card on already stalled opponent 
 }
 
 function dickMove(){
 	//play an immunity card at the moment your opponent gives you
 	//a hazard. Get bonus points.
+	extraTurn(); 
+}
+
+function extraTurn(){
+	//initiate extra turn 
 }
