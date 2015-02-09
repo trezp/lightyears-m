@@ -41,6 +41,12 @@ a:hover {
   font-size: 2em;
 }
 
+.goHome {
+  text-align: left;
+  color: white;
+  font-size: 1rem;
+}
+
 .gameItem {
   color: blue;
   font-size: 20px;

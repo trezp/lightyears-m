@@ -5,8 +5,6 @@ Router.route('/', function() {
 });
 
 Router.route('/game/:_id', function(){
-	this.render('play');
-	game = Games.findOne();
-	game.players = Games.findOne().players[]
+	this.render('play', {data : Games.findOne(this.params._id)});
 });
 

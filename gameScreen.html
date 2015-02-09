@@ -1,0 +1,43 @@
+
+<!-- GAME SCREEN -->
+<template name='play'>
+	{{#if currentUser}}
+		<p class="goHome"><i class="fa fa-backward"></i>&nbsp;
+		<a href="/">Back to game list</a></p>
+	{{/if}}
+	<div id="wrapper">
+		<div class="main"><p>Light Years Traveled: {{score}}</p></div>
+		<div class="avatarandstack">
+		<div class="avatarbox">
+			<i class="fa fa-user fa-5x"></i>
+			<p>Your opponent:<br>{{opponent}}</p><br>ß
+			<p>Status: {{opponentStatus}}</p><br>
+			<p>Score: {{opponentScore}}</p>
+		</div>
+		<div class="messageBox">
+			<p class="status">Status:</p>
+			<h1>{{stalled}}</h1>
+			<p id="statusMessage">{{statusMessage}}</p>
+		</div>
+		<div class="deck">
+			<p>DRAW A CARD</p>
+		</div>
+		<div class="stack">
+			<i class="fa fa-map-marker fa-5x"></i>
+			<p>Map of the Universe</p>
+		</div>
+		</div>
+		<div class="handbox">
+			<ul class="hand">
+				{{#each hand}}
+					<div class="card">
+						<li>{{title}}<br><i class="fa fa-rocket fa-5x"></i></li>
+					</div>
+				{{/each}}
+			</ul>	
+		</div>
+	</div>
+</template>
+
+
+	

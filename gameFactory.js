@@ -18,9 +18,9 @@ Game.createGame = function(playerId){
 
 function Card (title, value, cardType, fixes) {
   this.title = title;
-  this.value = value; 
+  this.value = value || 0; 
   this.cardType = cardType;
-  this.fixes = "none";
+  this.fixes = fixes || "none";
 };
 
 function makeDeck () {
@@ -38,27 +38,27 @@ function makeDeck () {
     cards.push(new Card("200 light years",200, "mileageCard"));
   };
   for (var i = 0; i < 5; i++) {
-    cards.push(new Card("Grounded", 0, true, false, "hazard"));
+    cards.push(new Card("Grounded", 0, "hazard"));
   };
   for (var i = 0; i < 3; i++) {
     cards.push(new Card("Out of Fuel", 0, "hazard"));
     cards.push(new Card("Engine Failure", 0, "hazard"));
     cards.push(new Card("Alien Abduction", 0, "hazard"));
-    cards.push(new Card("Lost in Space", 0, "hazard"));
+    cards.push(new Card("Lost in Space", 0,"hazard"));
   };
   for (var i = 0; i < 14; i++) {
-    cards.push(new Card("Take off", "remedy", "Grounded" ));
+    cards.push(new Card("Take off", 0,"remedy", "Grounded"));
   };
   for (var i = 0; i < 6; i++) {
-    cards.push(new Card("Plutonium", 0, "remedy", "Out of Fuel"));
-    cards.push(new Card("Repairs", 0, "remedy", "Engine Failure"));
+    cards.push(new Card("Plutonium",0, "remedy", "Out of Fuel"));
+    cards.push(new Card("Repairs",0, "remedy", "Engine Failure"));
     cards.push(new Card("Escape", 0, "remedy", "Alien Abduction"));
-    cards.push(new Card("Directions", 0, 'remedy', "Lost In Space"));
+    cards.push(new Card("Directions",0, 'remedy', "Lost In Space"));
   };
-   	cards.push(new Card("Superstar Astronaut", "immunity"));
-    cards.push(new Card("Force Field", 0, "immunity"));
-    cards.push(new Card("Interstellar Diplomat", 0, "immunity"));
-    cards.push(new Card("Map of the Universe", 0, "immunity"));
+   	cards.push(new Card("Superstar Astronaut",0, "immunity"));
+    cards.push(new Card("Force Field",0, "immunity"));
+    cards.push(new Card("Interstellar Diplomat",0, "immunity"));
+    cards.push(new Card("Map of the Universe",0, "immunity"));
 
     return _.shuffle(cards); 
 };
@@ -80,8 +80,9 @@ function createPlayers(ids){
 			hand: [],
 			stack: [],
 			score: 0,
-			stalled: true
-      immunity: "none"
+			stalled: "Stalled",
+      immunity: "No immunities",
+      username: Meteor.users.findOne(id).username
 		}
 	});
 	return playerObject;
