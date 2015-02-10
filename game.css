@@ -100,6 +100,17 @@ p {
 	-webkit-box-shadow: -1px 10px 5px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow:    -1px 10px 5px 0px rgba(50, 50, 50, 0.75);
 	box-shadow:         -1px 10px 5px 0px rgba(50, 50, 50, 0.75);
+
+}
+
+.card:hover {
+	transform: translateY(-15px);
+}
+
+.card li {
+	position: absolute;
+	text-align: center;
+	margin-left: 20px;
 }
 
 
@@ -166,14 +177,28 @@ p {
 	color: black;
 }
 
-/*.score {
-	background: black;
-	width: 10rem;
-	height: 10rem;
-	margin: 40px;
-	text-align: center;
+.hoverMenuItem {
+	position: relative;
+	top: 163px;
+	right: -6px;
+	border: solid black 2px;
+	background: green;
 	color: white;
-	
+	border-radius: 5px;
+	height: 40px;
+	width: 69px;
+	display: inline-block;
+	text-align: center;
+	padding: 10px;
+	margin: 3px;
+}
+
+.hoverMenuItem:hover {
+	background-color: blue;
+	color: white;
+}
+/*.hidden {
+	visibility: hidden;
 }*/
 
 

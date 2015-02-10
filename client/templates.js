@@ -61,19 +61,34 @@ Template.play.helpers({
 	},
 
 	statusMessage : function(){
-// 		console.log(this.players[Meteor.userId()].hand.title)
-		if (this.players[Meteor.userId()].stalled === "Stalled"){
+		if (Meteor.user()){
+			if (this.players[Meteor.userId()].stalled === "Stalled"){
 			return("To move on, you must REMEDY your situation.");
 		} else if (this.players[Meteor.userId()].stalled === "Traveling"){
 			return("You're gliding through space.");
 		} else {
 			return("Preparing for take off...");
 		}
+		}
+		
 		    
 	},
 
 	score : function(){
-		return this.players[Meteor.userId()].score
+		if (Meteor.user()){
+			return this.players[Meteor.userId()].score
+		}
+		
+	}, 
+
+	immunity: function(){
+		if (Meteor.user()){
+			if (this.players[Meteor.userId()].immunity === "No immunities" ){
+			return "No immunities"
+		} else {
+			return this.players[Meteor.userId()].immunity 
+		}
+	}	
 	}
 
 

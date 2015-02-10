@@ -47,6 +47,10 @@ a:hover {
   font-size: 1rem;
 }
 
+.goHome a {
+  text-decoration: none;
+}
+
 .gameItem {
   color: blue;
   font-size: 20px;
@@ -75,3 +79,4 @@ button:hover {
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+

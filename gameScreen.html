@@ -24,7 +24,7 @@
 		</div>
 		<div class="stack">
 			<i class="fa fa-map-marker fa-5x"></i>
-			<p>Map of the Universe</p>
+			<p>{{immunity}}</p>
 		</div>
 		</div>
 		<div class="handbox">
@@ -32,6 +32,8 @@
 				{{#each hand}}
 					<div class="card">
 						<li>{{title}}<br><i class="fa fa-rocket fa-5x"></i></li>
+						<div id="play" class="hidden hoverMenuItem">Play</div>
+						<div id="discard" class="hidden hoverMenuItem">Discard</div>
 					</div>
 				{{/each}}
 			</ul>	
