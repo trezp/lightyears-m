@@ -11,6 +11,12 @@ Template.play.helpers({
 		};
 	},
 
+	test : function(){
+		if (this.players){
+			return this.find().fetch()[0].players[Meteor.userId()]
+		}
+	},
+
 	currentUser : function(){
 		if (Meteor.user()) {
 			return Meteor.user().username
@@ -75,7 +81,7 @@ Template.play.helpers({
 	},
 
 	score : function(){
-		if (Meteor.user()){
+		if (this.players){
 			return this.players[Meteor.userId()].score
 		}
 		
