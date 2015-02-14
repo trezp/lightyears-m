@@ -8,17 +8,21 @@
 	<div id="wrapper">
 		<div class="main"><p>Light Years Traveled: {{score}}</p></div>
 		<div class="avatarandstack">
+<!-- displays opponent's information  -->
 		<div class="avatarbox">
 			<i class="fa fa-user fa-5x"></i>
 			<p>Your opponent:<br>{{opponent}}</p><br>ß
 			<p>Status: {{opponentStatus}}</p><br>
-			<p>Score: {{opponentScore}}</p>
+			<p>Distance Traveled: {{opponentScore}}</p>
 		</div>
+<!-- displays player information -->
 		<div class="messageBox">
-			<p class="status">Status:</p>
+			<p class="status">{{currentUser}}'s Status:</p>
 			<h1>{{stalled}}</h1>
 			<p id="statusMessage">{{statusMessage}}</p>
+			<p>Light years traveled: {{score}}</p>
 		</div>
+<!-- Deck and stack area  -->
 		<div class="deck">
 			<p>DRAW A CARD</p>
 		</div>
@@ -27,6 +31,7 @@
 			<p>{{immunity}}</p>
 		</div>
 		</div>
+<!-- Hand/card display area  -->
 		<div class="handbox">
 			<ul class="hand">
 				{{#each hand}}

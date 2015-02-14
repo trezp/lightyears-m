@@ -1,4 +1,4 @@
-
+///////////////////GAME LOGIC PSUEDO CODE//////////////////////////////
 
 // //player actions 
 // 	//must draw a card every turn 

@@ -80,7 +80,7 @@ function createPlayers(ids){
 			hand: [],
 			stack: [],
 			score: 0,
-			stalled: "Stalled",
+			stalled: "grounded",
       immunity: "No immunities",
       username: Meteor.users.findOne(id).username
 		}

@@ -1,9 +1,6 @@
 ///////////////// GAME SCREEN HELPERS /////////////////////
-
+//return values from properties of the game object in Games collection in database 
 Template.play.helpers({
-	// game : function () {
-	// 	return Games.findOne(this.params._id);
-	// },
 
 	hand : function(){
 		if (this.players){
@@ -47,12 +44,9 @@ Template.play.helpers({
 
 	stalled : function(){
 		if (this.players){
-			if (this.players[Meteor.userId()].stalled === "Stalled" ){
-				return this.players[Meteor.userId()].stalled
-			} else {
-				return "Traveling"
-			}
-		};
+			return "Traveling" 
+			
+		}
 	},
 
 	opponentScore: function(){
@@ -67,7 +61,7 @@ Template.play.helpers({
 	},
 
 	statusMessage : function(){
-		if (Meteor.user()){
+		if (this.players){
 			if (this.players[Meteor.userId()].stalled === "Stalled"){
 			return("To move on, you must REMEDY your situation.");
 		} else if (this.players[Meteor.userId()].stalled === "Traveling"){
@@ -88,14 +82,14 @@ Template.play.helpers({
 	}, 
 
 	immunity: function(){
-		if (Meteor.user()){
+		if (this.players){
 			if (this.players[Meteor.userId()].immunity === "No immunities" ){
 			return "No immunities"
 		} else {
 			return this.players[Meteor.userId()].immunity 
 		}
 	}	
-	}
+	},
 
 
 	
