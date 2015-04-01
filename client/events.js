@@ -57,6 +57,6 @@ Template.play.events({
 	},
 
 	'click #discard' : function(event, target){
-		alert("This has been pretend thrown away.");
+		console.log("This has been pretend thrown away.");
 	}
 });

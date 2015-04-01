@@ -15,80 +15,88 @@ Template.play.helpers({
 	},
 
 	currentUser : function(){
-		if (Meteor.user()) {
-			return Meteor.user().username
-		};
+		return "Kal-El";
+		// if (Meteor.user()) {
+		// 	// return Meteor.user().username
+		// };
 	},
 
 	opponent : function(){
-		if (Meteor.user()) {
-			for (var player in this.players){
-				if (player !== Meteor.userId()){
-					return this.players[player].username
-				}
-			}
+		return "Alf";
+		// if (Meteor.user()) {
+		// 	for (var player in this.players){
+		// 		if (player !== Meteor.userId()){
+		// 			return this.players[player].username
+		// 		}
+		// 	}
 			
-		}
+		// }
 	},
 
 	opponentStatus : function(){
-		if (Meteor.user()) {
-			for (var player in this.players){
-				if (player !== Meteor.userId()){
-					return this.players[player].stalled
-				}
-			}
+		return "Out of Plutonium"
+		// if (Meteor.user()) {
+		// 	for (var player in this.players){
+		// 		if (player !== Meteor.userId()){
+		// 			return this.players[player].stalled
+		// 		}
+		// 	}
 			
-		}
+		// }
 	},
 
 	stalled : function(){
-		if (this.players){
-			return "Traveling" 
+		return "Abducted"
+		// if (this.players){
+		// 	return "Traveling" 
 			
-		}
+		// }
 	},
 
 	opponentScore: function(){
-		if (Meteor.user()) {
-			for (var player in this.players){
-				if (player !== Meteor.userId()){
-					return this.players[player].score 
-				}
-			}
+		return "500 light years"
+		// if (Meteor.user()) {
+		// 	for (var player in this.players){
+		// 		if (player !== Meteor.userId()){
+		// 			return this.players[player].score 
+		// 		}
+		// 	}
 			
-		}
+		// }
 	},
 
 	statusMessage : function(){
-		if (this.players){
-			if (this.players[Meteor.userId()].stalled === "Stalled"){
-			return("To move on, you must REMEDY your situation.");
-		} else if (this.players[Meteor.userId()].stalled === "Traveling"){
-			return("You're gliding through space.");
-		} else {
-			return("Preparing for take off...");
-		}
-		}
+		return "You need an Escape card to continue."
+		// if (this.players){
+		// 	if (this.players[Meteor.userId()].stalled === "Stalled"){
+		// 	return("To move on, you must REMEDY your situation.");
+		// } else if (this.players[Meteor.userId()].stalled === "Traveling"){
+		// 	return("You're gliding through space.");
+		// } else {
+		// 	return("Preparing for take off...");
+		// }
+		// }
 		
 		    
 	},
 
 	score : function(){
-		if (this.players){
-			return this.players[Meteor.userId()].score
-		}
+		return 925
+		// if (this.players){
+		// 	return this.players[Meteor.userId()].score
+		// }
 		
 	}, 
 
 	immunity: function(){
-		if (this.players){
-			if (this.players[Meteor.userId()].immunity === "No immunities" ){
-			return "No immunities"
-		} else {
-			return this.players[Meteor.userId()].immunity 
-		}
-	}	
+		return "Map of the Universe"
+	// 	if (this.players){
+	// 		if (this.players[Meteor.userId()].immunity === "No immunities" ){
+	// 		return "No immunities"
+	// 	} else {
+	// 		return this.players[Meteor.userId()].immunity 
+	// 	}
+	// }	
 	},
 
 
