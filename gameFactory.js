@@ -16,6 +16,15 @@ Game.createGame = function(playerId){
 	}
 };
 
+Game.deal = function(players, deck) {
+    for (var i = 0; i < 6; i++) {
+      Object.keys(players).forEach(function(id){
+        players[id].hand.push(deck.shift());
+      });
+    
+    }
+  };
+
 function Card (title, value, cardType, fixes) {
   this.title = title;
   this.value = value || 0; 
@@ -63,14 +72,6 @@ function makeDeck () {
     return _.shuffle(cards); 
 };
 
-Game.deal = function(players, deck) {
-    for (var i = 0; i < 6; i++) {
-    	Object.keys(players).forEach(function(id){
-    		players[id].hand.push(deck.shift());
-    	});
-    
-    }
-  };
 
 function createPlayers(ids){
 	var playerObject = {};

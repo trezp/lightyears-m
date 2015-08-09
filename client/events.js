@@ -10,18 +10,27 @@ Template.play.events({
 	},
 
 	'click .deck' : function(event, target){
-		Meteor.call('hand')
-		Meteor.call('checkScore')
+		Meteor.call('hand');
+		Meteor.call('checkScore');
 	}, 
+
+	'click #wrapper' : function(){
+		swal({   title: "Light Years is Under Construction",   
+				 text: "But you can view the code at github.com/trezp/lightyears-m",  
+				 type: "info",   
+				 confirmButtonText: "Okay!" 
+		});
+		
+	},
 
 	'click #play' : function(event, target){
 
-		Meteor.call('score')	
-		Meteor.call('immunity')
-		Meteor.call('getMovementStatus')
-		Meteor.call('player')
-		Meteor.call('playSelf')
-		Meteor.call('updateScore')
+		Meteor.call('score');	
+		Meteor.call('immunity');
+		Meteor.call('getMovementStatus');
+		Meteor.call('player');
+		Meteor.call('playSelf');
+		Meteor.call('updateScore');
 		// console.log(target.data)
 		// var currentGame = Games.findOne()._id
 		// var currentScore = Games.findOne().players[Meteor.userId()].score
@@ -30,29 +39,29 @@ Template.play.events({
 		//if the player is stalled, they can't play a mileage card
 		if(this.cardType === "mileageCard"){
 			if (getMovementStatus === "Stalled"){
-			Meteor.call('rejectPlay')
+			Meteor.call('rejectPlay');
 		} else {
-			Meteor.call('moveCardToPlayerStack')
-			Meteor.call('updateScore')
+			Meteor.call('moveCardToPlayerStack');
+			Meteor.call('updateScore');
 			}
 		}
 		//if the "fixes" property of the played card matches the "stalled" property, move card
 		//and update score 
 		if(this.cardType === "remedy" && getMovementStatus === this.fixes) {
-		 	Meteor.call('moveCardToPlayerStack')
-			Meteor.call('updateScore')
+		 	Meteor.call('moveCardToPlayerStack');
+			Meteor.call('updateScore');
 		} else {
-			Meteor.call('rejectPlay')
+			Meteor.call('rejectPlay');
 		} 
 		//if the cardType is immunity, updates immunity 
 
 		if (this.cardType === "immunityCard") {
-	   		Meteor.call('updateImmunity')
-	   		Meteor.call('extraTurn')
+	   		Meteor.call('updateImmunity');
+	   		Meteor.call('extraTurn');
 		} 
 		//OPPONENT MUST NOT ALREADY BE STALLED
 		if(this.cardType === "hazard"){
-			Meteor.call('playOppenent')
+			Meteor.call('playOppenent');
 		} 
 	},
 
